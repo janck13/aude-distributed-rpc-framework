@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8194436d-b7ff-46c3-96ae-2f395eed40f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java" afterPath="$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/exception/AudeRpcException.java" afterPath="$PROJECT_DIR$/src/main/java/core/exception/AudeRpcException.java" />
     </list>
     <ignored path="aude-distributed-rpc-framework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="AudeChannel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+            <state relative-caret-position="647">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +79,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/core/serializer/ISerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/exception/AudeRpcException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java" />
       </list>
     </option>
   </component>
@@ -109,7 +108,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1122" />
+    <option name="x" value="1015" />
     <option name="y" value="22" />
     <option name="width" value="1628" />
     <option name="height" value="1388" />
@@ -808,15 +807,15 @@
       <option name="presentableId" value="Default" />
       <updated>1479493412905</updated>
       <workItem from="1479493414102" duration="4579000" />
-      <workItem from="1479536509638" duration="1333000" />
+      <workItem from="1479536509638" duration="1533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5912000" />
+    <option name="totallyTimeSpent" value="6112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1122" y="22" width="1628" height="1388" extended-state="0" />
+    <frame x="1015" y="22" width="1628" height="1388" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -868,6 +867,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -922,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/channel/AudeChannel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        <state relative-caret-position="647">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

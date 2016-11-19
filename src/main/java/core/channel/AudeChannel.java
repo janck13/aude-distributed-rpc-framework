@@ -11,7 +11,6 @@ import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 /**
  * Created by lrkin on 2016/11/19.
@@ -85,15 +84,16 @@ public class AudeChannel implements IChannel {
             } catch (final ExecutionException e) {
                 log.warn("连接断了!");
                 throw new AudeRpcException(e);
-                e.printStackTrace();
             } catch (final Exception e) {
                 e.printStackTrace();
+                log.error("写出数据异常", e);
+                log.warn("open:{}", this.isOpen());
             }
         }
 
     }
 
     public void close() throws IOException {
-
+        this.channel.close();
     }
 }
