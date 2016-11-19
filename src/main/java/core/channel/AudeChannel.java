@@ -1,5 +1,6 @@
 package core.channel;
 
+import core.exception.AudeRpcException;
 import core.message.IMessage;
 import core.serializer.ISerializer;
 import org.slf4j.Logger;
@@ -47,8 +48,8 @@ public class AudeChannel implements IChannel {
             //1.先去channel取前四个字节,转为int,获取到消息的长度
             final ByteBuffer messageLength = ByteBuffer.allocate(4);
             try {
-                final Integer integer = this.channel.read(messageLength).get(timeout, TimeUnit.MILLISECONDS);
-                if (-1 == integer) {
+                final Integer result = this.channel.read(messageLength).get(timeout, TimeUnit.MILLISECONDS);
+                if (-1 == result) {
                     log.debug("关闭连接 {} <-> {}", this.channel.getLocalAddress(), this.channel.getRemoteAddress());
                     close();
                     return null;
@@ -70,7 +71,24 @@ public class AudeChannel implements IChannel {
 
     public void write(IMessage message) {
         if (this.isOpen()) {
-            this.serializer.decoder(message);
+            try {
+                final byte[] bytes = this.serializer.decoder(message);
+                final ByteBuffer byteBuffer = ByteBuffer.allocate(4 + bytes.length);
+                byteBuffer.putInt(bytes.length);
+                byteBuffer.put(bytes);
+                byteBuffer.flip();
+                final Integer result = this.channel.write(byteBuffer).get(timeout, TimeUnit.MILLISECONDS);
+                if (-1 == result) {
+                    log.warn("连接断了");
+                    log.warn("open:{}", this.isOpen());
+                }
+            } catch (final ExecutionException e) {
+                log.warn("连接断了!");
+                throw new AudeRpcException(e);
+                e.printStackTrace();
+            } catch (final Exception e) {
+                e.printStackTrace();
+            }
         }
 
     }
